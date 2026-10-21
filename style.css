@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  color-scheme: dark;
+  --page: #0b1020;
+  --surface: #111a2e;
+  --surface-light: #17233b;
+  --text: #f2f5fb;
+  --muted: #a3aec2;
+  --accent: #78f0c2;
+  --accent-strong: #3dd6a0;
+  --line: rgba(195, 212, 240, 0.12);
+  --content-width: 1080px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 80% 8%, rgba(55, 115, 145, 0.16), transparent 36rem),
+    radial-gradient(ellipse at 8% 38%, rgba(76, 75, 160, 0.12), transparent 32rem),
+    var(--page);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--page);
+}
+
+a {
+  color: inherit;
+}
+
+header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  border-bottom: 1px solid var(--line);
+  background: rgba(11, 16, 32, 0.82);
+  backdrop-filter: blur(18px);
+}
+
+nav {
+  display: flex;
+  width: min(var(--content-width), calc(100% - 48px));
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+nav h2 {
+  margin: 0;
+  color: var(--text);
+  font-family: "Manrope", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+
+nav h2::after {
+  color: var(--accent);
+  content: ".";
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 34px);
+}
+
+.links a {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.links a:hover,
+.links a:focus-visible {
+  color: var(--accent);
+}
+
+section {
+  width: min(var(--content-width), calc(100% - 48px));
+  margin: 0 auto;
+  padding: 92px 0;
+}
+
+.hero {
+  display: flex;
+  min-height: min(760px, calc(100svh - 76px));
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 110px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 20px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.tag::before {
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+  content: "";
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text);
+  font-family: "Manrope", sans-serif;
+  line-height: 1.2;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(3.5rem, 9vw, 6.8rem);
+  font-weight: 800;
+  letter-spacing: -0.085em;
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.hero h3 {
+  margin: 14px 0 0;
+  color: #c0cadd;
+  font-size: clamp(1.25rem, 3vw, 1.8rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.about-intro,
+.about-description {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 1.04rem;
+}
+
+.hero .about-intro {
+  margin: 28px 0 0;
+  color: #d3dbea;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+}
+
+.hero .about-intro + .about-intro {
+  display: none;
+}
+
+.hero .about-description {
+  margin: 12px 0 0;
+}
+
+.btn {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 0 23px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: var(--accent);
+  color: #071610;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: transparent;
+  color: var(--accent);
+}
+
+#about,
+#skills,
+#projects,
+#contact {
+  border-top: 1px solid var(--line);
+}
+
+section > h2,
+#projects > h3 {
+  margin: 0 0 22px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.07em;
+}
+
+#about .about-intro {
+  margin: 0 0 12px;
+  color: #d3dbea;
+  font-size: 1.2rem;
+}
+
+#about .about-description {
+  margin: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: linear-gradient(145deg, rgba(23, 35, 59, 0.94), rgba(17, 26, 46, 0.8));
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.cards .card {
+  display: grid;
+  min-height: 105px;
+  place-items: center;
+  color: var(--accent);
+  font-family: "Manrope", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.cards .card:hover,
+#projects .card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(120, 240, 194, 0.45);
+}
+
+#projects .card {
+  margin-top: 16px;
+  padding: 24px 26px;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+#projects .card h3,
+#projects .card h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+}
+
+#projects .card p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+#contact p {
+  margin: 10px 0;
+  color: var(--muted);
+}
+
+#contact p:first-of-type {
+  margin-top: 26px;
+}
+
+#contact p::first-line {
+  color: var(--text);
+}
+
+footer {
+  padding: 24px;
+  border-top: 1px solid var(--line);
+  color: #8491a8;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  nav {
+    width: calc(100% - 32px);
+    min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 14px 0 12px;
+  }
+
+  nav h2 {
+    font-size: 1.1rem;
+  }
+
+  .links {
+    width: 100%;
+    gap: clamp(14px, 5vw, 24px);
+    overflow-x: auto;
+    padding: 3px 0;
+    scrollbar-width: none;
+  }
+
+  .links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .links a {
+    flex: 0 0 auto;
+    font-size: 0.82rem;
+  }
+
+  section {
+    width: calc(100% - 36px);
+    padding: 68px 0;
+  }
+
+  .hero {
+    min-height: 0;
+    padding-top: 96px;
+    padding-bottom: 82px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.2rem, 17vw, 5rem);
+  }
+
+  .about-intro,
+  .about-description {
+    font-size: 0.98rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  #projects .card {
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
