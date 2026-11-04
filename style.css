@@ -396,3 +396,13 @@ footer p {
 .profile-intro .tag {
   margin: 0;
 }
+.project-status {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 12px;
+  background-color: #e3f2fd;
+  color: #1565c0;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
