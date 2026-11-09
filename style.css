@@ -433,3 +433,51 @@ footer p {
 #backToTop:hover {
   transform: translateY(-5px);
 }
+
+/* Social Media Section */
+.social-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.social-section h2 {
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.social-section p {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social-link {
+  text-decoration: none;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+}
+
+.github {
+  background: #24292e;
+}
+
+.telegram {
+  background: #0088cc;
+}
+
+.linkedin {
+  background: #0a66c2;
+}
