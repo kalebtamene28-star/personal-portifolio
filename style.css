@@ -481,3 +481,52 @@ footer p {
 .linkedin {
   background: #0a66c2;
 }
+
+/* My Journey Section */
+.journey-section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.journey-section h2 {
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.journey-intro {
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+.journey-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.journey-card {
+  background: var(--surface);
+  padding: 30px 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(120, 240, 194, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.journey-card:hover {
+  transform: translateY(-8px);
+}
+
+.journey-year {
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.journey-card h3 {
+  margin: 15px 0;
+}
+
+.journey-card p {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
