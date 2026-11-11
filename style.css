@@ -530,3 +530,8 @@ footer p {
   color: var(--text-muted);
   line-height: 1.7;
 }
+.availability {
+  color: var(--accent);
+  font-size: 14px;
+  margin-top: 15px;
+}
